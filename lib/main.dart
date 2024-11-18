@@ -1,15 +1,23 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-// TODO: Allow dynamic input for firstName and lastName
-String getFullName(String firstName, String lastName){
-  return "$firstName $lastName";
-}
-
-// TODO: Print the full name to the console
-printMyName() => print(getFullName('Leaphea', 'Sok'));
 
 void main() {
   runApp(const MyApp());
+}
+
+void test(){
+  const name = 'Foo';
+
+  if(name == 'Foo'){
+    if (kDebugMode) {
+      print('name is Foo');
+    }
+  }
+  else{
+    if (kDebugMode) {
+      print('name is not Foo. name is $name');
+    }
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +25,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    printMyName();
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
