@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 
+// TODO: Allow dynamic input for firstName and lastName
+String getFullName(String firstName, String lastName){
+  return "$firstName $lastName";
+}
+
+// TODO: Print the full name to the console
+printMyName() => print(getFullName('Leaphea', 'Sok'));
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,10 +17,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    printMyName();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
